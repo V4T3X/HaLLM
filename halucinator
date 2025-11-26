@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python -m halucinator.main $@
+python3 -m halucinator.main $@

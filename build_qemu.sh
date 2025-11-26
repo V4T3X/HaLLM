@@ -15,8 +15,8 @@ do
     pushd deps/
     mkdir -p build-qemu/"$target"
     cd build-qemu/"$target"
-    ../../avatar-qemu/configure --target-list=$target
-    make all -j`nproc`
+    ../../avatar-qemu/configure --target-list=$target --disable-werror
+    make all -j$(nproc)
     popd
 done
 
