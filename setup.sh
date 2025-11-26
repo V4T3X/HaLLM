@@ -9,6 +9,7 @@ fi
 
 pip install -e deps/avatar2/
 pip install -r src/requirements.txt
+pip install -e src/hallm-extension/
 pip install -e src
 
 
