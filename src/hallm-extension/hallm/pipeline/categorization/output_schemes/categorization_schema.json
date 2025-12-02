@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "function_name": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string"
+        },
+        "peripheral": {
+            "type": "string"
+        },
+        "interaction": {
+            "type": "string"
+        },
+        "confidence": {
+            "type": "number"
+        }
+    },
+    "required": [
+        "function_name",
+        "category",
+        "peripheral",
+        "interaction",
+        "confidence"
+    ]
+}

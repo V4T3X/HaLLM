@@ -6,6 +6,7 @@ import argparse
 
 from halucinator import hal_log, hal_config
 from halucinator.main import emulate_binary
+from .pipeline.pipeline import Pipeline
 
 
 log = logging.getLogger(__name__)
@@ -115,6 +116,11 @@ def main():
     if args.qemu_args:
         qemu_args = " ".join(args.qemu_args)
 
+    # HaLLM Pipeline start
+    hallm_pipeline = Pipeline(config)
+    hallm_pipeline.run()
+
+    '''
     emulate_binary(
         config,
         args.name,
@@ -128,6 +134,7 @@ def main():
         gdb_server_port=args.gdb_server_port,
         print_qemu_command=args.print_qemu_command,
     )
+    '''
 
 
 if __name__ == "__main__":
